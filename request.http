@@ -1,0 +1,44 @@
+POST http://localhost:3000/api/tax
+content-type: application/json
+
+{
+    "first_name": "Andrew",
+    "last_name": "Smith",
+    "annual_salary": 60050,
+    "super_rate": 9,
+    "payment_start_date": "2022-12-25"
+}
+
+####
+POST http://localhost:3000/api/tax
+content-type: application/json
+
+{
+    "first_name": "Claire",
+    "last_name": "Wong",
+    "annual_salary": 120000,
+    "super_rate": 10,
+    "payment_start_date": "2022-12-25"
+}
+
+####
+120000
+
+1. 18,200 - 0 -  0 - 101,800
+2. 18799 - 0.19 - 3571.81 - 83001
+3. 49999 - 0.325 - 16249.675 - 33,002
+4. 92999 - 0.37 - 12210.74 - 0
+
+Tax - 2669
+
+####
+POST http://localhost:3000/api/tax
+content-type: application/json
+
+{
+    "first_name": "Claire",
+    "last_name": "Wong",
+    "annual_salary": 200000,
+    "super_rate": 10,
+    "payment_start_date": "2022-12-25"
+}
